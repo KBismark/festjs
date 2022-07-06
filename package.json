@@ -1,0 +1,29 @@
+{
+  "name": "festfast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/KBismark/fest.git"
+  },
+  "author": "Bismark Yamoah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KBismark/fest/issues"
+  },
+  "homepage": "https://github.com/KBismark/fest#readme",
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.19",
+    "uglify-js": "^3.16.0"
+  }
+}
