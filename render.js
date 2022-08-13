@@ -18,17 +18,35 @@ function Render(festProps,JXS,render) {
 
     return {
         /**
-         * This builds your component and returns the fully built component.
-         * All components rely on the current state of the `festProps` object passed to `Render()`
+         * This builds your component and returns the fully built component. Components
+         * built with `getElement` will be re-rendered everytime it's parent component renders. 
+         * 
+         * All components rely on the current state of the `festProps object` passed to `Render()`
          * and the argument, `args` passed to your JSX method
          */
         getElement:emptyElement,
         /**
-         * This builds your component and returns the fully built component only once.
-         * All components rely on the current state of the `festProps` object passed to `Render()`
-         * and the argument, `args` passed to your JSX method. *Recommended if component won't be re-rendered.*
+         * This builds your component and returns the fully built component only once. Components
+         * built with `getElementOnce` will not be re-rendered even if it's parent component renders.
+         * It re-renders only when `rerender` is called.    
+         * 
+         * All components rely on the current state of the `festProps object` passed to `Render()`
+         * and the argument, `args` passed to your JSX method. 
          */
          getElementOnce:emptyElement,
+         /**
+         * This builds your component and returns the fully built component only once. Components
+         * built with `getStatelessElement` uses the state obeject, `festProps object` only once and 
+         * does not keep a reference to the component. Hence, `rerender` has no effect. Calling any of
+         * the component buider methods after `getStatelessElement` will return null or an empty string 
+         * depending on the method called.   
+         * 
+         * All components rely on the current state of the `festProps object` passed to `Render()`
+         * and the argument, `args` passed to your JSX method. State object for this cnnot be reused  
+         * 
+         * *Recommended if component won't be re-rendered.*
+         */
+          getStatelessElement:emptyElement,
         /**
          * 
          */
@@ -41,10 +59,35 @@ function Render(festProps,JXS,render) {
          * 
          */
          renderOnce:emptyString,
+         /**
+         * 
+         */
+          renderStatelessElement:emptyString,
         /**
          * 
          */
-        rerender:emptyElement
+        rerender:emptyElement,
+        /**
+         * The best way to remove a re-rendable component is to call `remove`.
+         * Calling `remove` removes the component from the DOM tree and destroys all 
+         * references to the component that was created. 
+         * 
+         */
+         remove:()=>{},
+         /**
+         * The best way to hide a re-rendable component from showing on the screen
+         *  is to call `hide` and use `show` to show it back on the screen. 
+         * 
+         */
+         hide:()=>{},
+         /**
+          * This will display a hidden re-rendable component
+         */
+         show:()=>{},
+         /**
+          * This destroys all references created for a re-rendable component
+         */
+         disown:()=>{},
     };
     
 };
