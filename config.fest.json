@@ -1,39 +1,6 @@
 {
     "production":false,
     "white-space":false,
-    "reload":true,
-    "compileTo":"SET TO PATH TO YOUR APP'S FILE",
-    "appSrcName":"SET TO THE PATH TO YOUR APP DECLARED IN YOUR HTML FILE",
-    "festEngineSrcName":"SET TO THE PATH TO FEST.JS DECLARED IN YOUR HTML FILE",
-    "main":"SET TO THE PATH TO YOUR HTML FILE",
-    "external":{
-        "@EXAMPLE: PATH TO A FILE YOU DECLARED IN YOUR HTML FILE":{
-            "src":"ACTUAL PATH TO THE FILE",
-            "headers":{
-                "Content-Type":"GIVE THE CONTENT TYPE"
-            }
-        }
-    },
-    "scripts":[
-        {
-            "exports":["Component1","Component2"],
-            "path":"./FEST JSX FILE IN THE /SCRIPTS FOLDER WITHOUT THE EXTENSION NAME",
-            "compile":true
-        },
-        {
-            "exports":["Component1","Component2"],
-            "path":"./PLAIN JAVASCRIPT FILE IN THE /SCRIPTS FOLDER WITHOUT THE EXTENSION NAME",
-            "compile":false
-        },
-        {
-            "exports":["Component1","Component2"],
-            "path":"./PATH TO FEST JSX FILE LOCATED ANYWHERE ON YOUR MACHINE WITHOUT THE EXTENSION NAME",
-            "compile":true
-        },
-        {
-            "exports":["Component1","Component2"],
-            "path":"./PATH TO PLAIN JAVASCRIPT FILE LOCATED ANYWHERE ON YOUR MACHINE WITHOUT THE EXTENSION NAME",
-            "compile":false
-        }
-    ]
+    "reload":false,
+    "compileTo":null
 }
