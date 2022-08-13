@@ -2,13 +2,13 @@
   "name": "festfast",
   "version": "1.0.0",
   "description": "",
-  "main": "./build.js",
+  "main": "./lib/build.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./build.js"
+    "start": "nodemon ./lib/build.js"
   },
   "repository": {
     "type": "git",
